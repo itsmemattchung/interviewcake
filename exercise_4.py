@@ -13,7 +13,9 @@ def get_top_n_numbers(n, array_of_ints):
 class TestHighestProduct(unittest.TestCase):
     def test_highest_product(self):
         test_numbers = [1,8,5,9,7]
+        test_numbers2 = [-10,-10,1,3,2]
         self.assertEqual(highest_product(test_numbers), 504)
+        self.assertEqual(highest_product(test_numbers2), 300)
 
     def test_sorted_array_of_ints(self):
         test_numbers = [1,8,5,9,7]
