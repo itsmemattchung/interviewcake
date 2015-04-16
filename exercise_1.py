@@ -10,6 +10,7 @@ def get_max_profit(stock_prices):
     profits = {}
     for buy_index, purchase_price in enumerate(stock_prices):
         future_stocks = stock_prices[buy_index:]
+        # we can only compare it to future times
         for sell_index, sell_price in enumerate(future_stocks, start=buy_index):
             profits[sell_price - purchase_price] = (buy_index, sell_index)
     return profits
