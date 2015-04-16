@@ -28,3 +28,4 @@ class TestHighestProductExceptIndex(unittest.TestCase):
 
     def test_get_products_of_all_ints_except_at_index(self):
         self.assertEquals(get_products_of_all_ints_except_at_index(self.array_of_ints), [84,12,28,21])
+        self.assertEquals(get_products_of_all_ints_except_at_index([0,1,2,3]), [6,0,0,0])
