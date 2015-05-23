@@ -20,6 +20,8 @@ class CakeThief:
         return max_number_of_bags
 
     def max_duffel_bag_value(self, cakes, capacity):
+	if capacity == 0:
+	    return 0
 	sorted_cakes = self.sort_cakes(cakes, capacity)
 	current_capacity = capacity
 	max_duffel_bag_value = 0
@@ -50,3 +52,4 @@ class TestCakeThief(unittest.TestCase):
 
     def test_max_duffel_bag_value(self):
 	self.assertEquals(555, self.cake_thief.max_duffel_bag_value(self.cakes, self.capacity))
+	self.assertEquals(0, self.cake_thief.max_duffel_bag_value(self.cakes, 0))
